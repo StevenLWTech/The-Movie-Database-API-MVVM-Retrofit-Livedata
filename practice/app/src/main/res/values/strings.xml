@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">practice</string>
+    <string name="lorem"> lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem </string>
+    <string name="packages">packagesString</string>
+    <string name="price">price</string>
+    <string name="popular_category">Popular Movies</string>
+    <string name="trending_category">Trending Movies</string>
+    <string name="action">Action Movies</string>
+    <string name="mystery_category">Mystery Movies</string>
+    <string name="popular_shows">Popular TV Shows</string>
+    <string name="trending_shows">Trending TV Shows</string>
+    <string name="sci_fi_show_category">Sci-Fi &amp; Fantasy TV Shows</string>
+    <string name="war_show_category">War &amp; Politics TV Shows</string>
+    <string name="family_category">Family Movies</string>
+    <string name="top_rated_shows">Top Rated TV Shows</string>
+    <string name="transformers">Transformers</string>
+    <string name="dawn_porter">dawn porter</string>
+    <string name="price_view">$9.99</string>
+    <string name="purchaseButton">Buy</string>
+    <string name="teststring">Lorem</string>
+    <string name="homePage">Movie Homepage</string>
+    <string name="search_label">hmm_label</string>
+    <string name="recommended_title">Recommended for you</string>
+</resources>
