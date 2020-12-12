@@ -7,6 +7,9 @@ import com.google.android.material.tabs.TabLayout;
 import com.zybooks.practice.Fragment.MoviesFragment;
 import com.zybooks.practice.Fragment.TvShowsFragment;
 
+/**
+ * The tab adapter for HomeActivity
+ */
 public class PackageTabAdapter extends FragmentStatePagerAdapter {
     TabLayout tabLayout;
 

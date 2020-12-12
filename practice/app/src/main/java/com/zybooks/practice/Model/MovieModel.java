@@ -5,7 +5,7 @@ import android.os.Parcelable;
 
 import com.zybooks.practice.requests.MovieApi;
 import com.zybooks.practice.requests.ServiceGenerator;
-
+    //Model for popular/recommended movies
 public class MovieModel implements Parcelable {
 
     private int id;

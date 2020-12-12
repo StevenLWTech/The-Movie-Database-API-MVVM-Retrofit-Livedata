@@ -14,6 +14,9 @@ import com.zybooks.practice.R;
 
 import java.util.List;
 
+/**
+ * Adapter for Recommended Recyclerview in MovieDetailActivity
+ */
 public class RecommendMovieAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private OnRecommendListener onRecommendListener;

@@ -13,6 +13,10 @@ import com.zybooks.practice.R;
 
 import java.util.List;
 
+/**
+ *
+ *Adapter for TV Shows in TvShowsFragment
+ */
 public class TVAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private OnMovieListener mOnTvListener;

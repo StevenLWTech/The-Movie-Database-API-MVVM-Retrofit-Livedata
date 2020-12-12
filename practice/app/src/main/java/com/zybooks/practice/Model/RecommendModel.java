@@ -2,7 +2,7 @@ package com.zybooks.practice.Model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-
+    //Model for recommended movies and shows
 public class RecommendModel implements Parcelable {
     private int id;
     private String original_title;

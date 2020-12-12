@@ -23,7 +23,9 @@ import retrofit2.Response;
 import static com.zybooks.practice.util.Constants.NETWORK_TIMEOUT;
 
 public class MovieApiClient {
-
+    /**
+     * Model in MVVM
+     */
 
     private MutableLiveData<Boolean> mMovieRequestTimeout = new MutableLiveData<>();
     private static MovieApiClient instance;

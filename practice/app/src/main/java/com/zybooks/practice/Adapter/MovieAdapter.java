@@ -14,20 +14,18 @@ import com.zybooks.practice.R;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This Adapter is responsible for recyclerview in MoviesFragment & TvShowsFragment
+ */
 public class MovieAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private OnMovieListener mOnMovieListener;
-    private OnRecommendListener mOnRecommendListener;
     private List<MovieModel> mMovies;
     private static final String TAG = "TrendingAdapter";
 
     public MovieAdapter(OnMovieListener onMovieListener) {
 
         this.mOnMovieListener = onMovieListener;
-    }
-    public MovieAdapter(OnRecommendListener mOnRecommendListener) {
-
-        this.mOnRecommendListener = mOnRecommendListener;
     }
 
     @Override

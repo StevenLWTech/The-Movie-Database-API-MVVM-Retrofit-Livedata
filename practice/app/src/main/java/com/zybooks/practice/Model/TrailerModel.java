@@ -1,7 +1,7 @@
 package com.zybooks.practice.Model;
 
 public class TrailerModel {
-
+    //Model for trailer call
     private String key;
 
     public TrailerModel() {

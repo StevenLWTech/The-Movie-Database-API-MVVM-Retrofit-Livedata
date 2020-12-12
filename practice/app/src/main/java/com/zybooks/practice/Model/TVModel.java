@@ -2,7 +2,7 @@ package com.zybooks.practice.Model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-
+    //Model for tv shows
 public class TVModel implements Parcelable {
     private int id;
     private float vote_average;

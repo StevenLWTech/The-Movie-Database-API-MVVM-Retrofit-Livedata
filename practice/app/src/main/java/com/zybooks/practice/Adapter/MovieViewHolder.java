@@ -11,6 +11,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.zybooks.practice.Model.MovieModel;
 import com.zybooks.practice.R;
 
+/**
+ * This Viewholder is for MoviesFragment & TvShowsFragment which passes a view in onClickListener
+ */
 public class MovieViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
     TextView title, release_date;

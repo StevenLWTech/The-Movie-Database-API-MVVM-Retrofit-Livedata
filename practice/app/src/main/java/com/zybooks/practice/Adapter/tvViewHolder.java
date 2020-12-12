@@ -11,7 +11,7 @@ import com.zybooks.practice.R;
 
 public class tvViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-    TextView title, release_date;
+    TextView title;
     RatingBar vote_average;
     ImageView image;
     OnMovieListener onClickListener;

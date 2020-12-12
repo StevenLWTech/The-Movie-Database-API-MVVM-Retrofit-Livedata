@@ -38,7 +38,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 /**
- * A simple {@link Fragment} subclass.
+ * Fragment displays list of tv shows & categories
  */
 public class TvShowsFragment extends Fragment {
     private static final String TAG = "TVFragment";

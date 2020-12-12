@@ -71,7 +71,7 @@ public class HomeActivity extends AppCompatActivity implements OnMovieListener {
 
 
     private void subscribeObservers() {
-        // CHANGED: Not really needed, the fragment classes are observing their own data
+        //Observes when a query is done
         mMovieListViewModel.getMovies().observe(this, new Observer<List<MovieModel>>() {
             @Override
             public void onChanged(@Nullable List<MovieModel> movies) {
@@ -135,15 +135,18 @@ public class HomeActivity extends AppCompatActivity implements OnMovieListener {
     //onMovieClick passes movieModel to intent
     @Override
     public void onMovieClick(MovieModel movieModel) {
-        Intent intent = new Intent(this.getApplicationContext(), MovieDetailActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
+//        Intent intent = new Intent(this.getApplicationContext(), MovieDetailActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        Intent intent = new Intent(this, MovieDetailActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         intent.putExtra(MovieData, movieModel);
-        this.getApplicationContext().startActivity(intent);
+//        this.getApplicationContext().startActivity(intent);
+        startActivity(intent);
+
     }
 
     @Override
     public void onTvClick(TVModel tvModel) {
-        Intent intent = new Intent(this.getApplicationContext(), MovieDetailActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        Intent intent = new Intent(this.getApplicationContext(), MovieDetailActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
         intent.putExtra(TVData, tvModel);
         this.getApplicationContext().startActivity(intent);

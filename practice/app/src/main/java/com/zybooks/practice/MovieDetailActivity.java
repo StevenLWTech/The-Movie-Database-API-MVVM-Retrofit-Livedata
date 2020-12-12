@@ -73,10 +73,6 @@ public class MovieDetailActivity extends AppCompatActivity implements OnRecommen
         youTubePlayerView = findViewById(R.id.video_view);
         mRecommendRecyclerView = findViewById(R.id.recommendedRecyclerView);
         mMovieDetailsViewModel = new ViewModelProvider(this).get(MovieDetailsModel.class);
-
-
-
-
         initRecyclerView();
         initViewModel();
         subscribeObservers();
@@ -98,12 +94,12 @@ public class MovieDetailActivity extends AppCompatActivity implements OnRecommen
         if (getIntent().hasExtra(TvData)) {
             TVModel tvDetails = getIntent().getParcelableExtra(TvData);
             mMovieDetailsViewModel.init(tvDetails.getId());
-            Log.e(TAG, "initViewModel: " + tvDetails.getId() );
+            Log.e(TAG, "initViewModel: " + tvDetails.getId());
         }
         if (getIntent().hasExtra(MovieData)) {
             MovieModel movieDetails = getIntent().getParcelableExtra(MovieData);
             mMovieDetailsViewModel.init(movieDetails.getId());
-            Log.e(TAG, "initViewModel: " + movieDetails.getId() );
+            Log.e(TAG, "initViewModel: " + movieDetails.getId());
         }
     }
 
@@ -163,7 +159,7 @@ public class MovieDetailActivity extends AppCompatActivity implements OnRecommen
                     String posterPath = "https://image.tmdb.org/t/p/original/" + movieDetailResponse.getPoster_path();
                     Picasso.get().load(posterPath).into(mMovieImage);
                     mURL = movieDetailResponse.getHomepage();
-                    if (movieDetailResponse.getHomepage() != null){
+                    if (movieDetailResponse.getHomepage() != null) {
                         Log.d(TAG, "onChanged: " + movieDetailResponse.getHomepage());
                         mButton.setVisibility(View.VISIBLE);
                     }
@@ -174,7 +170,7 @@ public class MovieDetailActivity extends AppCompatActivity implements OnRecommen
         //if it's a show data then update show recommendation and details
         if (getIntent().hasExtra(TvData)) {
             TVModel showDetails = getIntent().getParcelableExtra(TvData);
-            Log.e(TAG, "subscribeObservers: " + showDetails.getId() );
+            Log.e(TAG, "subscribeObservers: " + showDetails.getId());
             mMovieDetailsViewModel.init(showDetails.getId());
             mMovieDetailsViewModel.getShowDetails().observe(this, new Observer<ShowDetailResponse>() {
                 @Override
@@ -209,10 +205,15 @@ public class MovieDetailActivity extends AppCompatActivity implements OnRecommen
 
     }
 
+    @Override
+    public void onBackPressed() {
+        finishAffinity();
+        startActivity(new Intent(MovieDetailActivity.this, HomeActivity.class));
+    }
 
     public void onClickOpenWebpageButton(View v) {
         Log.d(TAG, "onClickOpenWebpageButton: " + mURL);
-                openWebPage(mURL);
+        openWebPage(mURL);
     }
 
     private void openWebPage(String mURL) {

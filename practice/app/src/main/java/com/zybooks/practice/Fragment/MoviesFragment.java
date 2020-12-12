@@ -24,7 +24,9 @@ import com.zybooks.practice.viewmodels.MovieListViewModel;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * Fragment displays list of movies & categories
+ */
 public class MoviesFragment extends Fragment{
     private RecyclerView popularView, familyView, trendingView, actionView, mysteryView;
     private MovieAdapter mTrendingAdapter, mPopularAdapter, mActionAdapter, mMysteryAdapter, mFamilyAdapter;
